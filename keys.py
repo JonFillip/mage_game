@@ -1,5 +1,6 @@
 import pygame
 import sys
+from pygame.locals import *
 
 events = [
     pygame.KEYDOWN,
@@ -20,15 +21,33 @@ events = [
 ]
 
 
-def keys():
+class Keys:
     """Print the event attribute when user action detected."""
-    pygame.init()
-    pygame.display.set_mode(0, 0, 0)
-    pygame.display.set_caption("Ready Player Zero")
-    while True:
-        # Watch for keyboard events.
-        for event in pygame.event.get(events):
-            if event.type in events:
-                print(event.type)
-            elif event.key == pygame.K_q:
-                sys.exit()
+
+    def __init__(self):
+        """Initialize game screen."""
+        pygame.init()
+
+        self.screen_width = 1200
+        self.screen_height = 800
+        self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        pygame.display.set_caption("Ready Player Zero")
+        self.clock = pygame.time.Clock()
+
+    def run_window(self):
+        """Start the loop for the game."""
+        while True:
+            # Watch for keyboard events.
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    print("User quit game.")
+                    sys.exit()
+            # Make the most recently drawn screen visible
+            pygame.display.flip()
+            self.clock.tick(60)
+
+
+if __name__ == "__main__":
+    """Make a game instance and run the game"""
+    game = Keys()
+    game.run_window()

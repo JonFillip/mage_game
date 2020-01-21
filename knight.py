@@ -13,36 +13,37 @@ class Mage:
 
         # Load images for character walking movement
         self.walk_left = [
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk2.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk3.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk4.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk5.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/left_walk6.bmp")
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk2.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk3.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk4.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk5.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk6.bmp")
         ]
         self.walk_right = [
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk1.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk2.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk3.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk4.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk5.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/craftpix-891165-assassin-mage-viking-free"
-                              "-pixel-art-game-heroes/Mage/Walk/walk6.bmp")
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk1.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk2.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk3.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk4.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk5.bmp"),
+            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
+                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk6.bmp")
         ]
 
         # Load the character - mage mage and get its rect.
-        image_file = "/craftpix-891165-assassin-mage-viking-free-pixel-art-game-heroes/Mage/Walk/standing.bmp"
+        image_file = "/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin-mage" \
+                     "-viking-free-pixel-art-game-heroes/Mage/Walk/standing.bmp"
 
         self.mage = pygame.image.load(image_file)
         self.rect = self.mage.get_rect()

@@ -1,9 +1,9 @@
 import sys
 import os
 import pygame
-from AlienApocalypse.game_settings import GameSettings
-from AlienApocalypse.knight import Mage
-from AlienApocalypse.bullet import Bullet
+from game_settings import GameSettings
+from knight import Mage
+from bullet import Bullet
 
 
 class AlienApocalypse:
@@ -34,7 +34,8 @@ class AlienApocalypse:
         if not found:
             raise Exception('No suitable video driver found!')
 
-        self.screen_window = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+        self.screen_window = pygame.display.set_mode((self.settings.screen_width,
+                                                      self.settings.screen_height))
         pygame.display.set_caption("Alien Apocalypse")
 
         """Setting background color"""

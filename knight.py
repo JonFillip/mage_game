@@ -13,37 +13,37 @@ class Mage:
 
         # Load images for character walking movement
         self.walk_left = [
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk2.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk3.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk4.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk5.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/left_walk6.bmp")
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk3.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk4.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk5.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/left_walk1.bmp")
         ]
         self.walk_right = [
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk1.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk2.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk3.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk4.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk5.bmp"),
-            pygame.image.load("/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin"
-                              "-mage-viking-free-pixel-art-game-heroes/Mage/Walk/walk6.bmp")
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk1.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk2.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk3.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk4.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk5.bmp"),
+            pygame.image.load("craftpix-891165-assassin-mage-viking-free"
+                              "-pixel-art-game-heroes/Mage/Walk/walk6.bmp")
         ]
 
         # Load the character - mage mage and get its rect.
-        image_file = "/Users/johnphillip/Desktop/alien_apocalypse/AlienApocalypse/craftpix-891165-assassin-mage" \
-                     "-viking-free-pixel-art-game-heroes/Mage/Walk/standing.bmp"
+        image_file = "craftpix-891165-assassin-mage-viking-free-pixel-art" \
+                     "-game-heroes/Mage/Walk/standing.bmp"
 
         self.mage = pygame.image.load(image_file)
         self.rect = self.mage.get_rect()
@@ -103,18 +103,22 @@ class Mage:
 
         if not self.standing:
             if self.moving_left:
-                self.screen_window.blit(self.walk_left[self.walk_count // 3], self.rect)
+                self.screen_window.blit(self.walk_left[self.walk_count // 3],
+                                        self.rect)
                 self.walk_count += 1
                 self.last_move = "left"
 
             elif self.moving_right:
-                self.screen_window.blit(self.walk_right[self.walk_count // 3], self.rect)
+                self.screen_window.blit(self.walk_right[self.walk_count // 3],
+                                        self.rect)
                 self.walk_count += 1
                 self.last_move = "right"
         else:
             if self.last_move == "right":
-                self.screen_window.blit(self.walk_right[0], self.rect)  # Set the blit to load last image facing right
+                self.screen_window.blit(self.walk_right[0], self.rect)  # Set
+                # the blit to load last image facing right
             elif self.last_move == "left":
-                self.screen_window.blit(self.walk_left[0], self.rect)  # Set the blit to load last image facing left
+                self.screen_window.blit(self.walk_left[0], self.rect)  # Set
+                # the blit to load last image facing left
             else:
                 self.screen_window.blit(self.mage, self.rect)
